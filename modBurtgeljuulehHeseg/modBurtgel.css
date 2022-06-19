@@ -1,0 +1,415 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    display: flex;
+    height: 100vh;
+    background-color: #b7ed88;;
+    flex-direction: column;
+}
+/* header heseg */
+.bar{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(#13af49, #228c22);
+    font-size: 15px;
+    color: #fdfefd; 
+    align-items: center;
+    justify-content: center;
+}
+a{
+    height: 40px;
+    color: #fdfefd;
+    text-decoration: none;
+    margin-left: 80px;
+}
+a:hover{
+    color:#314F9B;
+    height: 40px;
+}
+.garchig:hover{
+    background-color: #a3ebb1;
+
+}
+.garchig{
+    width: 100%;
+    height: 40px;
+   
+    display: flex;
+    align-items: center;
+}
+.header{
+    display: flex;
+    justify-content:space-between;
+    gap: 30px;
+    background-color: #e8e9eb;
+    padding-left: 100px;
+    align-items: center;
+
+}
+.header>p{
+    font-size: 30px;
+    color:#04A74B;
+    align-items: center;
+}
+.logo{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.logo>img{
+    width: 20%;
+    height: 80px;
+    border-radius: 50%;
+}
+.contact{
+    width: 20%;
+    height: 100%;
+    color:grey;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:20px;
+    
+    font-size: 15px;
+    
+}
+        /* sign up garj ireh task */
+        .burtgelheseg{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .e{
+            width: 70%;
+            height: 100%;
+            border: 1px solid #476930;
+            color: black;
+            display: flex;
+            background: linear-gradient(#13af49, #228c22);
+            flex-direction: column;
+            overflow: scroll;
+        }
+        #countmod{
+            font-size: 40px;
+            color: #22428b;
+            padding: 5px 15px;
+            background-color:#f1dddf;
+        }
+        .Registration{
+            width: 90%;
+            height: 100vh;
+            text-align: center;
+           
+        }
+        .text{
+            margin-left: 70px;
+            font-size: 50px;
+            color: #22428b;
+            font-weight: 300;
+        }
+        
+        input[type=text], select, .signUp-modal > button {
+            width: 80%;
+            padding: 12px 20px;
+            margin: 18px 0;
+            display: inline-block;
+            border: 1px solid #476930;
+            border-radius: 4px;
+            box-sizing: border-box;
+            
+            background-color: #f1dddf;
+          }
+          label{
+              display: flex;
+              justify-content: start;
+              margin-left: 50px;
+          }
+          .date{
+              width: 200px;
+          }
+          .dd{
+              display:flex;
+              flex-direction: row;
+              justify-content: space-around;
+              width: 80%;
+              margin-left: 40px;
+          }
+          #description{
+              width: 80%;
+              height: 180px;
+              overflow: scroll;
+          }
+          #tree{
+              width: 80%;
+              padding: 12px 20px;
+              background-color: #f1dddf;
+          }
+          .trees{
+              width: 80%;
+              background-color: #f1dddf;
+              margin-left: 70px;
+              margin-top: 18px;
+              
+              gap: 10px;
+          }
+          .trees_select{
+              display: flex;
+              align-items: center;
+              justify-content: space-around;
+          }
+          .otherTree {
+              display: none;
+          }
+          .add{
+              width: 5%;
+              height: 50%;
+              
+              padding: 12px 20px;
+             
+          }
+          input[type=number]{
+            width: 10%;
+            padding: 12px;
+            margin: 18px 0;
+            display: inline-block;
+            border: 1px solid #476930;
+            border-radius: 4px;
+            box-sizing: border-box;
+            
+            background-color: #f1dddf;
+          }
+
+            /* on sar udur */
+            .date-picker{
+                position: relative;
+                width: 100%;
+                max-width: 320px;
+                height: 60px;
+                background-color: #f1dddf;
+                margin-top: 18px;
+                margin-left: 70px;
+                box-shadow: 0px 3px 10px rgda(0,0,0,0.2);
+                cursor:pointer;
+                user-select:none;
+            }
+            .date-picker:hover{
+                background-color: #5276ca;
+            }
+            .date-picker .selected-date{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #22428b;
+                font-size: 28px;
+            }
+            .date-picker .dates{
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #f1dddf;
+            }
+            .date-picker .dates.active{
+                display: block;
+            }
+            .date-picker .dates .month{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 2px solid #eee;
+            }
+            .date-picker .dates .month .arrows{
+                width: 35px;
+                height: 35px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #22428b;
+                font-size: 20px;
+            }
+            .date-picker .dates .month .arrows:hover{
+                background-color: #b7ed88;
+            }
+            .date-picker .dates .month .arrows:active{
+                background-color: #5276ca;
+            }
+            .date-picker .dates .days {
+                display: grid;
+                grid-template-columns: repeat(7,1fr);
+                height: 200px;
+            }
+            .date-picker .dates .days .day{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color:black;
+
+            }
+            .date-picker .dates .days .day:hover{
+            background-color: #5276ca;
+
+            }
+    
+    sign in heseg
+    
+    .sign-in{
+        width: 30%;
+        height: 500px;
+        background-color: #b7ed88;
+        z-index: 10;
+        margin-top: 70px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    /* .sign-in>div{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    } */
+    .sign-in>input{
+        margin-top: 5px;
+    }
+    input{
+        width: 50%;
+        height: 5%;
+        border-radius: 10px;
+        border: 1px solid grey;
+        padding: 5px 5px;
+    }
+    .underline{
+        width: 50%;
+        border-bottom: 1px solid grey;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    #log-in-btn{
+        width: 50%;
+        height: 6%;
+        border: 1px solid grey;
+        border-radius: 10px;
+        background-color: #015c03;
+        color: #fff;
+        font-size: 16px;
+        padding: 5px 5px;
+    }
+    #log-in-btn:hover{
+        opacity: 0.8;
+    }
+    /* to do xeseg */
+
+    li {
+        position: relative;
+        list-style: none;
+    }
+    #myUL{
+        width:100%;
+        height:100%;
+    }
+    .modlist{
+        width: 200px;
+    }
+    .list{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #addBtn{
+        width: 40px;
+        height: 40px;
+        border:1px solid #f0ab90;
+        background-color: transparent;
+    }
+    #addBtn:hover{
+        background-color: #5276ca;
+    }
+    /* input[type=text]{
+    
+        border:1px solid #f0ab90;
+        color: black;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+    } */
+    .test{
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:#5276ca;
+    }
+    .test:hover{
+        background-color: #cfe3a6;
+    }
+    .too{
+        height: 50px;
+        width: 20%;
+        position: absolute;
+        left:150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        color:#5276ca;
+    }
+
+    .too:hover{
+        background-color: #cfe3a6;
+    }
+    .modnuud {
+        width: 260px;
+        height: 50px;
+        background-color: #f1dddf;
+        border-bottom: 1px solid grey;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 1%;
+        color:#5276ca;
+    }
+    .dropdownmod-tree {
+        display: none;
+        position: absolute;
+        background-color: #f1dddf;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+        z-index: 10;
+        right:200px;
+        font-size: 15px;
+      }
+
+      .ner{
+          margin-left: 20px;
+      }
+      #registration{
+          width: 80%;
+          padding: 10px;
+      }
+      #tree{
+          width: 80%;
+      }
