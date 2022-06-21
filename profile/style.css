@@ -1,0 +1,564 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+body{
+    height: 100vh;
+    background-color: #dee2fc;
+}
+/* header heseg -----------------------------*/
+.header-heseg{
+    height: 120px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.header{
+    display: flex;
+    background-color: #e8e9eb;
+    align-items: center;
+    justify-content: flex-start;
+    height: 68%;
+}
+.logo{
+    margin-left: 5%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 35%;
+    height: 100%;
+    border-radius: 50%;
+}
+.header p{
+    font-size: 120%;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+}
+.bar{
+    width: 100%;
+    height: 32%;
+    display: flex;
+    background: linear-gradient(#13af49, #228c22);
+    font-size: 15px;
+    color: #fdfefd;
+    align-items: center;
+    justify-content: center;
+}
+.torol{
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a{
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    color: #fdfefd;
+    text-decoration: none;
+}
+a:hover{
+    color:#314F9B;
+}
+.garchig:hover{
+    background-color: #a3ebb1;
+}
+.garchig{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* header heseg ----------------------------------*/
+
+.contentProfile{
+    padding: 35px;
+    width: 1200px;
+    height: 1000px;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    animation: contentProfile 3s ease;
+}
+@keyframes contentProfile {
+    0%{
+        transform: translateX(500px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/* talarhaliin heseg */
+.talarhaliinPart{
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color:#edeeee;
+    color:#525b88;
+    font-size: 25px;
+    border-radius:10px;
+    box-shadow: 5px 5px 10px;
+    transform: translateX(0);
+    animation: taralhal 2s ease;
+    /* position: absolute;
+    left: 0;
+    top: 0; */
+}
+@keyframes taralhal {
+    0%{
+        transform: translate(1500px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+#thanksgif{
+    height: 100%;
+    width: 20%;
+    transform: rotateX(50deg 50deg);
+    border-radius:10px 0 0 10px;
+}
+.talarhal{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    color:#282424;
+    background-image: linear-gradient(90deg ,transparent 0% , #edeeee 1%);
+    border-radius:0 10px 10px 0;
+    font-size: 90%;
+    display: flex;
+    flex-direction: column;
+    transform: translate(-1%,0px);
+    padding: 1% 0 1% 1%;
+}
+.talarhal h3{
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    margin-left: 10%;
+    font-size: 140%;
+    color: #525b88;
+}
+.talarhal p{
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    font-size: 100%;
+    color: #525b88;
+}
+/* talarhaliin heseg */
+
+/* hereglegchiin ner  */
+.profilemember{
+    color: #21315a;
+    margin: 35px 0;
+    transform: translateX(0);
+    animation: profilemember 3s ease;
+}
+/* hereglegchiin ner  */
+@keyframes profilemember {
+    0%{
+        transform: translateX(-400px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.profileMain{
+    box-sizing: border-box;
+    width: 100%;
+    height: 75%;
+    display: flex;
+    font-size: 30px;
+    color:#525b88;
+    border-radius:10px;
+}
+/* ------------------------ */
+.modniizurag{
+    position: relative;
+    width: 30%;
+    height: 100%;
+    /* background-color: skyblue; */
+    background-image: linear-gradient( skyblue,rgb(72, 133, 231));
+    overflow: hidden;
+    margin-right: 4%;
+    border-radius:10px 0 0 10px;
+    box-shadow: 5px 5px 10px;
+}
+#svgGrass{
+    position: absolute;
+    bottom: -17vh;
+    width: 100%;
+}
+#gifGrass{
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+}
+#tomMod{
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    bottom: 5%;
+}
+#svgMod{
+    width: 100%;
+    height: 70%;
+    z-index: 0;
+    position: absolute;
+    bottom: -13vh;
+    left: 40%;
+}
+#svgModArd{
+    width: 60%;
+    height: 70%;
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    left: -29%;
+    transform: rotate(5deg);
+}
+#goyMod{
+    width: 30%;
+    height: 30%;
+    z-index: 0.5;
+    position: absolute;
+    bottom: 0vh;
+    left: 15%;
+}
+/* ------------------------- */
+.memberPart{
+    /* border: 1px solid black; */
+    width: 80%;
+    height: 90%;
+    position: relative;
+    top: 10%;
+    left: -14%;
+    z-index: 4;
+    background-color: #edeeee;
+    box-shadow: 1px 1px 10px;
+    border-radius: 20px;
+}
+.profileZurag{
+    z-index: 4;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: relative;  
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profileZurag-anima{
+    position: absolute;
+    top: -25%;
+    left: -25%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 150%;
+    height: 150%;
+    background-image: conic-gradient( #525b88  190deg, transparent 220deg);
+    animation: rotate 3s linear infinite;    
+    border-radius: 50%;
+    background-color: #13af49;
+}
+.memberZurag{
+    width: 95%;
+    height: 95%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+}
+@keyframes rotate {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.profileZurag img{
+    position: absolute;
+    top: 0;
+    right:0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+#memberName{
+    border-radius: 10px ;
+    z-index: 1;
+    background-color: #525b88;
+    color: #edeeee;
+    padding: 5px 10px 5px 30px;
+    position: absolute;
+    top: 10%;
+    left: 3%;
+    transform: translateX(90%);
+    animation: memberPart-animation 4s ease;
+}
+#emailAdress{
+    background-color: #525b88;
+    color: #edeeee;
+    font-size: 15px;
+    padding: 5px 10px 5px 30px;
+    position: absolute;
+    top: 17%;
+    left: 6%;
+    transform: translateX(290%);
+    animation: memberPart-animation 4s ease;
+    border-radius: 10px ;
+}
+#treeNumber{
+    position: absolute;
+    top: 24.2%;
+    left: 2%;
+    background-color: #525b88;
+    color: #edeeee;
+    font-size: 15px;
+    padding: 5px 10px 5px 30px;
+    border-radius:10px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif; 
+    transform: translateX(145%);
+    animation: memberPart-animation 4s ease;
+}
+@keyframes memberPart-animation {
+    0%{ 
+        transform: translateX(0%);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.graphic {
+    width: 40%;
+    margin-left: 16%;
+    transform: translateY(5%);
+    animation: graphic-animation 4s ease;
+}
+@keyframes graphic-animation {
+    0%{ 
+        transform: translateY(-30%);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.modniiTuhai{
+    /* border: 1px solid black; */
+    width: 40%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom: 1px solid green;
+    padding: 5px 10px;
+    color: #525b88;
+}
+#onsarPro{
+    color: #525b88;
+}
+.suuliinUyiinMedeelel{
+    width: 55%;
+    height: 95%;
+    border-radius: 10px;
+    margin-right: 1%;    
+    overflow: scroll;
+    border: 1px solid yellow;
+    color:#525b88;
+}
+.profileHeader{
+    width: 100%;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.profileHeaderMain{
+    max-width: 1375px;
+}
+.profilelogo{
+width: 100px;
+height: 100%;
+
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+}
+.profileHeader i{
+    font-size: 22px;
+    color: #113257;
+}
+
+.profileHeseg{
+    /* position: fixed; */
+    display: block;
+    /* display: none; */
+    /* margin-bottom: 10%; */
+    width: 100%;
+    height: 600px;
+    background-color: white;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: start;
+    align-items:center;
+    flex-direction: column;
+    gap:5%;
+    margin-top: 120px;
+    margin-left: 50px;
+    border: 1px solid green;
+    border-radius:10px;
+    color:#525b88;
+}
+.modnemehBolonNiitmod{
+    width: 55%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modnemehBolonNiitmod button{
+    width: 100px;
+    height: 40px;
+    background-color: #dc582a;
+    color: white;
+    border-radius: 10px;
+}
+/* .helloworld{
+    width: 90%;
+    height: 10%;
+    margin-top: 2%;
+
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} */
+.hereglegciinDelgerengui{
+    width: 80%;
+    height: 70%;
+    font-size: 20px;
+    display: flex;
+    gap:5%;
+
+    color:#228c22;
+    border:1px solid green;
+    
+}
+.hereglegchiinMedeelel{
+    width: 30%;
+    height: 100%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:10%
+}
+.delgerenguiProfile{
+    width: 90%;
+    height: 70%;
+    border-radius: 10px;
+    margin-left: 5%;
+    display: flex;
+    font-size: 18px;
+    border: 1px solid yellow;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction:column;
+    gap:2%;
+}
+.delgerenguiProfile p{
+    margin-left: 5%;
+}
+
+.modnuud{
+    width: 90%;
+    height: 30%;
+    /* margin-top: 2%;
+    margin-left: 5%; */
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    gap:0.5%;
+    flex-direction: row;
+}
+.modniiZurag{
+    width: 30%;
+    height: 80%;
+    border-radius: 10px;  
+    margin-left: 1%;
+    border-radius: 10px;
+}
+/* .modniiTuhai p:nth-child(2){
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:10px ;
+    height: 25%; 
+    margin-left: 35%;
+} */
+/* .modniiTuhai p:nth-child(1){
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:10px ;
+    height: 25%;
+} */
+/* .modniiTuhai p:nth-child(3){
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:10px ;
+    height: 25%;   
+    text-align: center;
+
+} */
+/* .modniiTuhai p:nth-child(4){
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:10px ;
+    height: 25%;
+    margin-left: 35%;
+} */
