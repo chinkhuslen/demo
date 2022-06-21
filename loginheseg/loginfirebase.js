@@ -74,7 +74,7 @@ if((document.getElementById("baiguulagiinNerHeseg").style.display==="none")){
           niitmod:0,
           userUid:userUidFromCred
         });
-        // location.href = "../modBurtgeljuulehHeseg/modBurtgel.html";
+        location.href = "../modBurtgeljuulehHeseg/modBurtgel.html";
         
         
       })
@@ -100,7 +100,7 @@ if((document.getElementById("baiguulagiinNerHeseg").style.display==="none")){
                 niitmod:0,
                 userUid:userUidFromCred
               });
-              // location.href = "../modBurtgeljuulehHeseg/modBurtgel.html";
+              location.href = "../modBurtgeljuulehHeseg/modBurtgel.html";
                
             })
             .catch((error) => {
