@@ -93,7 +93,7 @@ if((document.getElementById("baiguulagiinNerHeseg").style.display==="none")){
               console.log(userCredential)
               const userUidFromCred=userCredential.user.uid;
               console.log(userUidFromCred);
-              alert("baiguulaga")
+              // alert("baiguulaga")
                 await setDoc(doc(db,"baiguulaga",userUidFromCred,),{
                 baiguulaganer:baiguulaganer,
                 email:email,
@@ -128,7 +128,7 @@ if((document.getElementById("baiguulagiinNerHeseg").style.display==="none")){
         // Signed in
         let userUid = userCredential.user.uid;
         await console.log("amjilttai newterlee uid= ", userUid);
-        window.location.href = "../modBurtgeljuulehHeseg/modBurtgel.html";
+        // window.location.href = "../modBurtgeljuulehHeseg/modBurtgel.html";
         console.log(auth.currentUser.email)
         localStorage.setItem("userid",userUid)
        
