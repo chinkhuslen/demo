@@ -54,14 +54,14 @@ body{
     align-items: center;
     justify-content: center;
 }
-a{
+.bar a{
     padding: 0 25px;
     display: flex;
     align-items: center;
     color: #fdfefd;
     text-decoration: none;
 }
-a:hover{
+.bar a:hover{
     color:#314F9B;
 }
 .garchig:hover{
@@ -89,7 +89,7 @@ a:hover{
 }
 @keyframes contentProfile {
     0%{
-        transform: translateX(500px);
+        transform: translateX(-500px);
         opacity: 0;
     }
     100%{
@@ -99,7 +99,7 @@ a:hover{
 /* talarhaliin heseg */
 .talarhaliinPart{
     width: 100%;
-    height: 130px;
+    height: 150px;
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -146,14 +146,13 @@ a:hover{
 .talarhal h3{
     font-family: 'Lobster', cursive;
     text-align: center;
-    margin-left: 10%;
     font-size: 140%;
     color: #525b88;
 }
 .talarhal p{
     font-family: 'Caveat', cursive;
     text-align: center;
-    font-size: 100%;
+    font-size: 110%;
     color: #525b88;
 }
 /* talarhaliin heseg */
@@ -243,6 +242,9 @@ a:hover{
     bottom: 0vh;
     left: 15%;
 }
+.humburger{
+    display: none;
+}
 /* ------------------------- */
 .memberPart{
     /* border: 1px solid black; */
@@ -317,8 +319,8 @@ a:hover{
     padding: 5px 10px 5px 30px;
     position: absolute;
     top: 10%;
-    left: 3%;
-    transform: translateX(90%);
+    left: 0;
+    transform: translateX(270px);
     animation: memberPart-animation 4s ease;
 }
 #emailAdress{
@@ -327,15 +329,22 @@ a:hover{
     font-size: 15px;
     padding: 5px 10px 5px 30px;
     position: absolute;
-    top: 17%;
-    left: 6%;
-    transform: translateX(290%);
+    /* width: 100%; */
+    top: 19%;
+    left: 0;
+    transform: translateX(280px);
     animation: memberPart-animation 4s ease;
     border-radius: 10px ;
 }
+#emailNer{
+    background-color: #525b88;
+    color: #edeeee;
+    font-size: 15px;
+    padding: 5px 10px 5px 30px;
+}
 #treeNumber{
     position: absolute;
-    top: 24.2%;
+    top: 25.6%;
     left: 2%;
     background-color: #525b88;
     color: #edeeee;
@@ -343,9 +352,50 @@ a:hover{
     padding: 5px 10px 5px 30px;
     border-radius:10px;
     border: none;
-    font-family: Arial, Helvetica, sans-serif; 
-    transform: translateX(145%);
+    transform: translateX(260px);
     animation: memberPart-animation 4s ease;
+}
+#tooshirhegPro{
+    background-color: #525b88;
+    color: #edeeee;
+    font-size: 15px;
+    padding: 5px 10px 5px 30px;
+    border-radius:10px;
+}
+#addTree{
+    position: absolute;
+    top:2%;
+    left: 5;
+    width: 150px;
+    height: 50px;
+    transform: translateX(380%);
+    animation: memberPart-animation 4s ease;
+    border: none;
+    font-size: 15px;
+}
+.modNemeh{
+    margin-left: 100px;
+    width:150px; 
+    height:50px;
+    background-color:#525b88; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    border-radius: 10px;
+}
+.nemeh:hover{
+    transform: scale(1.1);
+}
+.nemeh{
+    width: 50px;
+    height:50px;
+    background-color:#13af49;
+    border-radius: 10px;
+    font-size: 50px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    box-shadow: -1px 1px 2px ;
 }
 @keyframes memberPart-animation {
     0%{ 
@@ -358,8 +408,8 @@ a:hover{
 }
 .graphic {
     width: 40%;
-    margin-left: 16%;
-    transform: translateY(5%);
+    margin-left: 10%;
+    transform: translateY(10px);
     animation: graphic-animation 4s ease;
 }
 @keyframes graphic-animation {
@@ -373,192 +423,364 @@ a:hover{
 }
 .modniiTuhai{
     /* border: 1px solid black; */
-    width: 40%;
-    height: 30px;
+    width: 90%;
+    height:100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 16px;
+    font-size: 15px;
     margin: auto;
-    position: absolute;
-    top: 0;
-    right: 0;
+    overflow: scroll;
     border-bottom: 1px solid green;
     padding: 5px 10px;
     color: #525b88;
 }
+.modniiTuhai p{
+    margin: 10px;
+}
 #onsarPro{
     color: #525b88;
 }
-.suuliinUyiinMedeelel{
-    width: 55%;
-    height: 95%;
-    border-radius: 10px;
-    margin-right: 1%;    
+
+
+@media  (max-width: 1000px){
+    .header-heseg{
+        height: 120px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .contentProfile{
+        padding: 20px;
+        width: 700px;
+        height: 900px;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        animation: contentProfile 3s ease;
+    }
+    .bar{
+        width: 100%;
+        height: 32%;
+        display: flex;
+        background: linear-gradient(#13af49, #228c22);
+        font-size: 15px;
+        color: #fdfefd;
+        align-items: center;
+        justify-content: center;
+    }
+    .torol{
+        width: 700px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .garchig{
+        font-size: 13px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .bar a{
+        padding: 0 14px;
+        display: flex;
+        align-items: center;
+        color: #fdfefd;
+        text-decoration: none;
+    }
+    .bar a:hover{
+        color:#314F9B;
+    }
+    .profilemember{
+        color: #21315a;
+        margin: 20px 0;
+        transform: translateX(0);
+        animation: profilemember 3s ease;
+    }
+    #addTree{
+        position: absolute;
+        top:44%;
+        left: 0;
+        width: 110px;
+        height: 10px;
+        transform: translateX(150px);
+        animation: memberPart-animation 4s ease;
+        border: none;
+        font-size: 15px;
+    }
+    .talarhaliinPart{
+        width: 100%;
+        height: 150px;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        background-color:#edeeee;
+        color:#525b88;
+        font-size: 25px;
+        border-radius:10px;
+        box-shadow: 5px 5px 10px;
+        transform: translateX(0);
+        animation: taralhal 2s ease;
+    }
+    #thanksgif{
+        display: none;
+    }
+    .talarhal p{
+        /* border-radius: 10px; */
+        font-family: 'Caveat', cursive;
+        text-align: center;
+        font-size: 24px;
+        color: #525b88;
+    }
+    .talarhal{
+        background-color: #edeeee;
+        border-radius: 10px;
+        padding: 0 1% 1% 1%;
+    }
+    .modniizurag{
+        position: relative;
+        width: 35%;
+        height: 100%;
+        background-image: linear-gradient( skyblue,rgb(72, 133, 231));
+        overflow: hidden;
+        border-radius:10px 0 0 10px;
+        box-shadow: 5px 5px 10px;
+    }
+    .memberPart{
+        width: 60%;
+        height: 90%;
+        position: relative;
+        top: 10%;
+        left: -14%;
+        z-index: 4;
+        background-color: #edeeee;
+        box-shadow: 1px 1px 10px;
+        border-radius: 20px;
+    }
+    #memberName{
+        border-radius: 10px ;
+        z-index: 1;
+        background-color: #525b88;
+        color: #edeeee;
+        padding: 5px 10px 5px 40px;
+        position: absolute;
+        top: 3%;
+        left: 0;
+        transform: translateX(160px);
+        animation: memberPart-animation 4s ease;
+        font-size: 22px;
+    }
+    .profileZurag{
+        z-index: 4;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        position: relative;  
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #emailAdress{
+        background-color: #525b88;
+        color: #edeeee;
+        font-size: 15px;
+        padding: 5px 10px 5px 40px;
+        position: absolute;
+        /* width: 100%; */
+        top: 28%;
+        left: 0;
+        transform: translateX(165px);
+        animation: memberPart-animation 4s ease;
+        border-radius: 10px ;
+    }
+    .modNemeh{
+        margin-left: 100px;
+        width:125px; 
+        height:30px;
+        background-color:#525b88; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center;
+        border-radius: 10px;
+    }
+    .nemeh{
+        width: 30px;
+        height:30px;
+        background-color:#13af49;
+        border-radius: 10px;
+        font-size: 50px;
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        box-shadow: -1px 1px 2px ;
+    }
+    #treeNumber{
+        position: absolute;
+        top: 15.5%;
+        left: 0;
+        background-color: #525b88;
+        color: #edeeee;
+        font-size: 15px;
+        padding: 5px 10px 5px 30px;
+        border-radius:10px;
+        border: none;
+        transform: translateX(195px);
+        animation: memberPart-animation 4s ease;
+    }
+    .graphic {
+        width: 300px;
+        margin-left: 5%;
+        transform: translateY(5%);
+        animation: graphic-animation 4s ease;
+    }
+}
+@media (max-width:500px){
+    .header-heseg{
+        height: 70px;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: #e8e9eb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border: 1px solid black; */
+    }
+    .contentProfile{
+        padding: 0;
+        width: 100%;
+        height: 900px;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        animation: contentProfile 3s ease;
+    }
+    .bar{
+        display: none;
+    }
+    .torol{
+        display: none;
+    }
+    .garchig{
+        display: none;
+    }
+    .header{
+        /* display: none; */
+        background-color: #e8e9eb;
+        align-items: center;
+        justify-content: space-between;
+        height: 95%;
+        width: 99%;
+    }
+    .logo{
+        margin-left: 0;
+    }
+    .humburger{
+        position: relative;
+        margin-right: 20px;
+        width: 40px;
+        height: 35px;
+        background-color: #13af49;
+        /* border: 1px solid black; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3px;
+    }
+    .line{
+        margin: 1px;
+        width: 30px;
+        height: 5px;
+        background-color: #e8e9eb;
+        border-radius: 3px;
+    }
+    .huudsuud{
+        width: 130px;
+        position: absolute;
+        top: 125%;
+        /* right: 0; */
+        display: none;
+        flex-direction: column;
+        background-color: #21315a;
+        color: #e8e9eb;
+        text-decoration: none;
+        border-radius: 3px;
+        z-index: 10;
+    }
+    .huudsuud a{
+        margin: 5px;
+        color: #e8e9eb;
+        padding: 2px 6px;
+        text-decoration: none;
+        display: block;
+    }
+    .humburger a:hover{
+        border-bottom: 1px solid #e8e9eb;
+    }
+    .humburger:hover .huudsuud{
+        display: flex;
+        transform: translateX(-30px);
+        animation: humburger 1s ease;
+    }
+    @keyframes humburger {
+        0%{
+            opacity: 0;
+            transform: translateX(-60px);
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    .talarhaliinPart{
+        display: none;
+    }
+    .profilemember{
+        margin: 15px 0 15px 0;
+        font-size: 20px;
+    }
+    .modniizurag{
+        display: none;
+    }
+    .profileMain{
+        position: relative;
+    }
+    .memberPart{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    #memberName{
+        position:unset;
+    }
+    #emailAdress{
+        position:unset;
+    }
+    #treeNumber{
+        position: unset;
+    }
+    /* #addTree{
+        position: unset;
+    } */
+}
+.miniiTarisanModniiContainer{
+    width: 500px;
+    /*ackground-color: red;*/
+    height: 300px;
     overflow: scroll;
-    border: 1px solid yellow;
-    color:#525b88;
-}
-.profileHeader{
-    width: 100%;
-    height: 80px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    
-}
-.profileHeaderMain{
-    max-width: 1375px;
-}
-.profilelogo{
-width: 100px;
-height: 100%;
-
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
-}
-.profileHeader i{
-    font-size: 22px;
-    color: #113257;
-}
-
-.profileHeseg{
-    /* position: fixed; */
-    display: block;
-    /* display: none; */
-    /* margin-bottom: 10%; */
-    width: 100%;
-    height: 600px;
-    background-color: white;
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: start;
-    align-items:center;
-    flex-direction: column;
-    gap:5%;
-    margin-top: 120px;
-    margin-left: 50px;
-    border: 1px solid green;
-    border-radius:10px;
-    color:#525b88;
-}
-.modnemehBolonNiitmod{
-    width: 55%;
-    height: 90%;
-    display: flex;
-    justify-content: space-between;
+    /* display: flex; */
+    /* justify-content: space-between;
     align-items: center;
+    flex-direction: column; */
+    gap: 1%;
 }
-.modnemehBolonNiitmod button{
-    width: 100px;
-    height: 40px;
-    background-color: #dc582a;
-    color: white;
-    border-radius: 10px;
-}
-/* .helloworld{
-    width: 90%;
-    height: 10%;
-    margin-top: 2%;
-
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-} */
-.hereglegciinDelgerengui{
-    width: 80%;
-    height: 70%;
-    font-size: 20px;
-    display: flex;
-    gap:5%;
-
-    color:#228c22;
-    border:1px solid green;
-    
-}
-.hereglegchiinMedeelel{
-    width: 30%;
-    height: 100%;
-    border: 1px solid red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap:10%
-}
-.delgerenguiProfile{
-    width: 90%;
-    height: 70%;
-    border-radius: 10px;
-    margin-left: 5%;
-    display: flex;
-    font-size: 18px;
-    border: 1px solid yellow;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction:column;
-    gap:2%;
-}
-.delgerenguiProfile p{
-    margin-left: 5%;
-}
-
-.modnuud{
-    width: 90%;
-    height: 30%;
-    /* margin-top: 2%;
-    margin-left: 5%; */
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    gap:0.5%;
-    flex-direction: row;
-}
-.modniiZurag{
-    width: 30%;
-    height: 80%;
-    border-radius: 10px;  
-    margin-left: 1%;
-    border-radius: 10px;
-}
-/* .modniiTuhai p:nth-child(2){
-    width: 55%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius:10px ;
-    height: 25%; 
-    margin-left: 35%;
-} */
-/* .modniiTuhai p:nth-child(1){
-    width: 55%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius:10px ;
-    height: 25%;
-} */
-/* .modniiTuhai p:nth-child(3){
-    width:100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius:10px ;
-    height: 25%;   
-    text-align: center;
-
-} */
-/* .modniiTuhai p:nth-child(4){
-    width: 55%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius:10px ;
-    height: 25%;
-    margin-left: 35%;
-} */
