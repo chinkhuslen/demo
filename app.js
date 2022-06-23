@@ -82,7 +82,7 @@ async function signout () {
          await signOut(auth).then(async() => {
            await console.log("signed out");
            await swal("Амжилттай Бүртгэлээс гарлаа");
-           location.reload();
+          
            document.getElementById("nevtreh").style.display="block";
           document.getElementById("garah").style.display="none";
           }).catch((error) => {

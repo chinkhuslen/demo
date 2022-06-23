@@ -133,7 +133,7 @@ if((document.getElementById("baiguulagiinNerHeseg").style.display==="none")){
         // window.location.href = "./profileHeseg/.profile.html";
         console.log(auth.currentUser.email)
         localStorage.setItem("userid",userUid);
-        location.href = "./profile/index.html";
+        // location.href = "./profile/index.html";
        
       })
       .catch((error) => {
