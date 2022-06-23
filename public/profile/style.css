@@ -1,0 +1,786 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+body{
+    height: 100vh;
+    background-color: #dee2fc;
+}
+/* header heseg -----------------------------*/
+.header-heseg{
+    height: 120px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.header{
+    display: flex;
+    background-color: #e8e9eb;
+    align-items: center;
+    justify-content: flex-start;
+    height: 68%;
+}
+.logo{
+    margin-left: 5%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 35%;
+    height: 100%;
+    border-radius: 50%;
+}
+.header p{
+    font-size: 120%;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+}
+.bar{
+    width: 100%;
+    height: 32%;
+    display: flex;
+    background: linear-gradient(#13af49, #228c22);
+    font-size: 15px;
+    color: #fdfefd;
+    align-items: center;
+    justify-content: center;
+}
+.torol{
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bar a{
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    color: #fdfefd;
+    text-decoration: none;
+}
+.bar a:hover{
+    color:#314F9B;
+}
+.garchig:hover{
+    background-color: #a3ebb1;
+}
+.garchig{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* header heseg ----------------------------------*/
+
+.contentProfile{
+    padding: 35px;
+    width: 1200px;
+    height: 1000px;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    animation: contentProfile 3s ease;
+}
+@keyframes contentProfile {
+    0%{
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/* talarhaliin heseg */
+.talarhaliinPart{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color:#edeeee;
+    color:#525b88;
+    font-size: 25px;
+    border-radius:10px;
+    box-shadow: 5px 5px 10px;
+    transform: translateX(0);
+    animation: taralhal 2s ease;
+    /* position: absolute;
+    left: 0;
+    top: 0; */
+}
+@keyframes taralhal {
+    0%{
+        transform: translate(1500px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+#thanksgif{
+    height: 100%;
+    width: 20%;
+    transform: rotateX(50deg 50deg);
+    border-radius:10px 0 0 10px;
+}
+.talarhal{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    color:#282424;
+    background-image: linear-gradient(90deg ,transparent 0% , #edeeee 1%);
+    border-radius:0 10px 10px 0;
+    font-size: 90%;
+    display: flex;
+    flex-direction: column;
+    transform: translate(-1%,0px);
+    padding: 1% 0 1% 1%;
+}
+.talarhal h3{
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    font-size: 140%;
+    color: #525b88;
+}
+.talarhal p{
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    font-size: 110%;
+    color: #525b88;
+}
+/* talarhaliin heseg */
+
+/* hereglegchiin ner  */
+.profilemember{
+    color: #21315a;
+    margin: 35px 0;
+    transform: translateX(0);
+    animation: profilemember 3s ease;
+}
+/* hereglegchiin ner  */
+@keyframes profilemember {
+    0%{
+        transform: translateX(-400px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.profileMain{
+    box-sizing: border-box;
+    width: 100%;
+    height: 75%;
+    display: flex;
+    font-size: 30px;
+    color:#525b88;
+    border-radius:10px;
+}
+/* ------------------------ */
+.modniizurag{
+    position: relative;
+    width: 30%;
+    height: 100%;
+    /* background-color: skyblue; */
+    background-image: linear-gradient( skyblue,rgb(72, 133, 231));
+    overflow: hidden;
+    margin-right: 4%;
+    border-radius:10px 0 0 10px;
+    box-shadow: 5px 5px 10px;
+}
+#svgGrass{
+    position: absolute;
+    bottom: -17vh;
+    width: 100%;
+}
+#gifGrass{
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+}
+#tomMod{
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    bottom: 5%;
+}
+#svgMod{
+    width: 100%;
+    height: 70%;
+    z-index: 0;
+    position: absolute;
+    bottom: -13vh;
+    left: 40%;
+}
+#svgModArd{
+    width: 60%;
+    height: 70%;
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    left: -29%;
+    transform: rotate(5deg);
+}
+#goyMod{
+    width: 30%;
+    height: 30%;
+    z-index: 0.5;
+    position: absolute;
+    bottom: 0vh;
+    left: 15%;
+}
+.humburger{
+    display: none;
+}
+/* ------------------------- */
+.memberPart{
+    /* border: 1px solid black; */
+    width: 80%;
+    height: 90%;
+    position: relative;
+    top: 10%;
+    left: -14%;
+    z-index: 4;
+    background-color: #edeeee;
+    box-shadow: 1px 1px 10px;
+    border-radius: 20px;
+}
+.profileZurag{
+    z-index: 4;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: relative;  
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profileZurag-anima{
+    position: absolute;
+    top: -25%;
+    left: -25%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 150%;
+    height: 150%;
+    background-image: conic-gradient( #525b88  190deg, transparent 220deg);
+    animation: rotate 3s linear infinite;    
+    border-radius: 50%;
+    background-color: #13af49;
+}
+.memberZurag{
+    width: 95%;
+    height: 95%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+}
+@keyframes rotate {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.profileZurag img{
+    position: absolute;
+    top: 0;
+    right:0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+#memberName{
+    border-radius: 10px ;
+    z-index: 1;
+    background-color: #525b88;
+    color: #edeeee;
+    padding: 5px 10px 5px 30px;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    transform: translateX(270px);
+    animation: memberPart-animation 4s ease;
+}
+#emailAdress{
+    background-color: #525b88;
+    color: #edeeee;
+    font-size: 15px;
+    padding: 5px 10px 5px 30px;
+    position: absolute;
+    /* width: 100%; */
+    top: 19%;
+    left: 0;
+    transform: translateX(280px);
+    animation: memberPart-animation 4s ease;
+    border-radius: 10px ;
+}
+#emailNer{
+    background-color: #525b88;
+    color: #edeeee;
+    font-size: 15px;
+    padding: 5px 10px 5px 30px;
+}
+#treeNumber{
+    position: absolute;
+    top: 25.6%;
+    left: 2%;
+    background-color: #525b88;
+    color: #edeeee;
+    font-size: 15px;
+    padding: 5px 10px 5px 30px;
+    border-radius:10px;
+    border: none;
+    transform: translateX(260px);
+    animation: memberPart-animation 4s ease;
+}
+#tooshirhegPro{
+    background-color: #525b88;
+    color: #edeeee;
+    font-size: 15px;
+    padding: 5px 10px 5px 30px;
+    border-radius:10px;
+}
+#addTree{
+    position: absolute;
+    top:2%;
+    left: 5;
+    width: 150px;
+    height: 50px;
+    transform: translateX(380%);
+    animation: memberPart-animation 4s ease;
+    border: none;
+    font-size: 15px;
+}
+.modNemeh{
+    margin-left: 100px;
+    width:150px; 
+    height:50px;
+    background-color:#525b88; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    border-radius: 10px;
+}
+.nemeh:hover{
+    transform: scale(1.1);
+}
+.nemeh{
+    width: 50px;
+    height:50px;
+    background-color:#13af49;
+    border-radius: 10px;
+    font-size: 50px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    box-shadow: -1px 1px 2px ;
+}
+@keyframes memberPart-animation {
+    0%{ 
+        transform: translateX(0%);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.graphic {
+    width: 40%;
+    margin-left: 10%;
+    transform: translateY(10px);
+    animation: graphic-animation 4s ease;
+}
+@keyframes graphic-animation {
+    0%{ 
+        transform: translateY(-30%);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.modniiTuhai{
+    /* border: 1px solid black; */
+    width: 90%;
+    height:100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    margin: auto;
+    overflow: scroll;
+    border-bottom: 1px solid green;
+    padding: 5px 10px;
+    color: #525b88;
+}
+.modniiTuhai p{
+    margin: 10px;
+}
+#onsarPro{
+    color: #525b88;
+}
+
+
+@media  (max-width: 1000px){
+    .header-heseg{
+        height: 120px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .contentProfile{
+        padding: 20px;
+        width: 700px;
+        height: 900px;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        animation: contentProfile 3s ease;
+    }
+    .bar{
+        width: 100%;
+        height: 32%;
+        display: flex;
+        background: linear-gradient(#13af49, #228c22);
+        font-size: 15px;
+        color: #fdfefd;
+        align-items: center;
+        justify-content: center;
+    }
+    .torol{
+        width: 700px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .garchig{
+        font-size: 13px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .bar a{
+        padding: 0 14px;
+        display: flex;
+        align-items: center;
+        color: #fdfefd;
+        text-decoration: none;
+    }
+    .bar a:hover{
+        color:#314F9B;
+    }
+    .profilemember{
+        color: #21315a;
+        margin: 20px 0;
+        transform: translateX(0);
+        animation: profilemember 3s ease;
+    }
+    #addTree{
+        position: absolute;
+        top:44%;
+        left: 0;
+        width: 110px;
+        height: 10px;
+        transform: translateX(150px);
+        animation: memberPart-animation 4s ease;
+        border: none;
+        font-size: 15px;
+    }
+    .talarhaliinPart{
+        width: 100%;
+        height: 150px;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        background-color:#edeeee;
+        color:#525b88;
+        font-size: 25px;
+        border-radius:10px;
+        box-shadow: 5px 5px 10px;
+        transform: translateX(0);
+        animation: taralhal 2s ease;
+    }
+    #thanksgif{
+        display: none;
+    }
+    .talarhal p{
+        /* border-radius: 10px; */
+        font-family: 'Caveat', cursive;
+        text-align: center;
+        font-size: 24px;
+        color: #525b88;
+    }
+    .talarhal{
+        background-color: #edeeee;
+        border-radius: 10px;
+        padding: 0 1% 1% 1%;
+    }
+    .modniizurag{
+        position: relative;
+        width: 35%;
+        height: 100%;
+        background-image: linear-gradient( skyblue,rgb(72, 133, 231));
+        overflow: hidden;
+        border-radius:10px 0 0 10px;
+        box-shadow: 5px 5px 10px;
+    }
+    .memberPart{
+        width: 60%;
+        height: 90%;
+        position: relative;
+        top: 10%;
+        left: -14%;
+        z-index: 4;
+        background-color: #edeeee;
+        box-shadow: 1px 1px 10px;
+        border-radius: 20px;
+    }
+    #memberName{
+        border-radius: 10px ;
+        z-index: 1;
+        background-color: #525b88;
+        color: #edeeee;
+        padding: 5px 10px 5px 40px;
+        position: absolute;
+        top: 3%;
+        left: 0;
+        transform: translateX(160px);
+        animation: memberPart-animation 4s ease;
+        font-size: 22px;
+    }
+    .profileZurag{
+        z-index: 4;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        position: relative;  
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #emailAdress{
+        background-color: #525b88;
+        color: #edeeee;
+        font-size: 15px;
+        padding: 5px 10px 5px 40px;
+        position: absolute;
+        /* width: 100%; */
+        top: 28%;
+        left: 0;
+        transform: translateX(165px);
+        animation: memberPart-animation 4s ease;
+        border-radius: 10px ;
+    }
+    .modNemeh{
+        margin-left: 100px;
+        width:125px; 
+        height:30px;
+        background-color:#525b88; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center;
+        border-radius: 10px;
+    }
+    .nemeh{
+        width: 30px;
+        height:30px;
+        background-color:#13af49;
+        border-radius: 10px;
+        font-size: 50px;
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        box-shadow: -1px 1px 2px ;
+    }
+    #treeNumber{
+        position: absolute;
+        top: 15.5%;
+        left: 0;
+        background-color: #525b88;
+        color: #edeeee;
+        font-size: 15px;
+        padding: 5px 10px 5px 30px;
+        border-radius:10px;
+        border: none;
+        transform: translateX(195px);
+        animation: memberPart-animation 4s ease;
+    }
+    .graphic {
+        width: 300px;
+        margin-left: 5%;
+        transform: translateY(5%);
+        animation: graphic-animation 4s ease;
+    }
+}
+@media (max-width:500px){
+    .header-heseg{
+        height: 70px;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: #e8e9eb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border: 1px solid black; */
+    }
+    .contentProfile{
+        padding: 0;
+        width: 100%;
+        height: 900px;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        animation: contentProfile 3s ease;
+    }
+    .bar{
+        display: none;
+    }
+    .torol{
+        display: none;
+    }
+    .garchig{
+        display: none;
+    }
+    .header{
+        /* display: none; */
+        background-color: #e8e9eb;
+        align-items: center;
+        justify-content: space-between;
+        height: 95%;
+        width: 99%;
+    }
+    .logo{
+        margin-left: 0;
+    }
+    .humburger{
+        position: relative;
+        margin-right: 20px;
+        width: 40px;
+        height: 35px;
+        background-color: #13af49;
+        /* border: 1px solid black; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3px;
+    }
+    .line{
+        margin: 1px;
+        width: 30px;
+        height: 5px;
+        background-color: #e8e9eb;
+        border-radius: 3px;
+    }
+    .huudsuud{
+        width: 130px;
+        position: absolute;
+        top: 125%;
+        /* right: 0; */
+        display: none;
+        flex-direction: column;
+        background-color: #21315a;
+        color: #e8e9eb;
+        text-decoration: none;
+        border-radius: 3px;
+        z-index: 10;
+    }
+    .huudsuud a{
+        margin: 5px;
+        color: #e8e9eb;
+        padding: 2px 6px;
+        text-decoration: none;
+        display: block;
+    }
+    .humburger a:hover{
+        border-bottom: 1px solid #e8e9eb;
+    }
+    .humburger:hover .huudsuud{
+        display: flex;
+        transform: translateX(-30px);
+        animation: humburger 1s ease;
+    }
+    @keyframes humburger {
+        0%{
+            opacity: 0;
+            transform: translateX(-60px);
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    .talarhaliinPart{
+        display: none;
+    }
+    .profilemember{
+        margin: 15px 0 15px 0;
+        font-size: 20px;
+    }
+    .modniizurag{
+        display: none;
+    }
+    .profileMain{
+        position: relative;
+    }
+    .memberPart{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    #memberName{
+        position:unset;
+    }
+    #emailAdress{
+        position:unset;
+    }
+    #treeNumber{
+        position: unset;
+    }
+    /* #addTree{
+        position: unset;
+    } */
+}
+.miniiTarisanModniiContainer{
+    width: 500px;
+    /*ackground-color: red;*/
+    height: 300px;
+    overflow: scroll;
+    /* display: flex; */
+    /* justify-content: space-between;
+    align-items: center;
+    flex-direction: column; */
+    gap: 1%;
+}
