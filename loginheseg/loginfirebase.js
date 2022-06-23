@@ -61,7 +61,7 @@ import {
 //Хувь хүнээр хаяг үүсгэнэ
 if((document.getElementById("baiguulagiinNerHeseg").style.display==="none")){
   
-  alert("baiguulagabish")
+  
         createUserWithEmailAndPassword(auth,email,password)
       .then(async(userCredential)=>{
         console.log(userCredential)
@@ -74,7 +74,7 @@ if((document.getElementById("baiguulagiinNerHeseg").style.display==="none")){
           niitmod:0,
           userUid:userUidFromCred
         });
-        location.href = "../modBurtgeljuulehHeseg/modBurtgel.html";
+        location.href = "./profile/index.html";
         
         
       })
@@ -93,14 +93,14 @@ if((document.getElementById("baiguulagiinNerHeseg").style.display==="none")){
               console.log(userCredential)
               const userUidFromCred=userCredential.user.uid;
               console.log(userUidFromCred);
-              alert("baiguulaga")
+           
                 await setDoc(doc(db,"baiguulaga",userUidFromCred,),{
                 baiguulaganer:baiguulaganer,
                 email:email,
                 niitmod:0,
                 userUid:userUidFromCred
               });
-              location.href = "../modBurtgeljuulehHeseg/modBurtgel.html";
+              location.href = "./profile/index.html";
                
             })
             .catch((error) => {
@@ -118,20 +118,22 @@ if((document.getElementById("baiguulagiinNerHeseg").style.display==="none")){
 
 
   //nevtreh
-  const login=()=>{
+  const login=async()=>{
+    
     const email=document.getElementById("email").value;
     const password=document.getElementById("password").value;
   
-    signInWithEmailAndPassword(auth,email,password)
+   
     signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
+      .then(async(userCredential) => {
         // Signed in
         let userUid = userCredential.user.uid;
-        console.log("amjilttai newterlee uid= ", userUid);
+        await console.log("amjilttai newterlee uid= ", userUid);
+
         // window.location.href = "./profileHeseg/.profile.html";
         console.log(auth.currentUser.email)
         localStorage.setItem("userid",userUid);
-        location.href = "../modBurtgeljuulehHeseg/modBurtgel.html";
+        // location.href = "./profile/index.html";
        
       })
       .catch((error) => {
