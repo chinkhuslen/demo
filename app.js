@@ -1,3 +1,94 @@
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+
+
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
+  } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js";
+
+   import {
+       getStorage,ref as sRef,
+       uploadBytes ,
+       uploadBytesResumable
+    } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-storage.js";
+
+  import {
+      getFirestore,
+      collection,
+      getDocs,
+      addDoc,
+      getDoc,
+      setDoc,
+      doc,
+      updateDoc,
+      increment,
+  } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js";
+
+
+
+  import {
+      getDatabase,
+      onValue,
+      ref,
+      push,
+      query,
+      orderByChild,
+      orderByKey,
+      child,
+      set,
+      get,
+      onChildChanged,
+  } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js";
+  
+  const firebaseConfig = {
+          apiKey: "AIzaSyDgYAy6FkKAJ2_0e07Xh8LhzYOpP1ra9Q8",
+          authDomain: "demo1-1ee9d.firebaseapp.com",
+          databaseURL: "https://demo1-1ee9d-default-rtdb.asia-southeast1.firebasedatabase.app",
+          projectId: "demo1-1ee9d",
+          storageBucket: "demo1-1ee9d.appspot.com",
+          messagingSenderId: "247353066341",
+          appId: "1:247353066341:web:4b8f133a68a3d85679578c",
+          measurementId: "G-5N6BTMR62T"
+  };
+
+
+
+      const app = initializeApp(firebaseConfig);
+      const auth=getAuth(app);
+      const db=getFirestore(app);
+      const realDb=getDatabase(app);
+      const storage = getStorage(app);
+
+
+      onAuthStateChanged(auth,async(user)=>{
+              
+        if(user)
+        {
+        console.log("hello1");
+        
+        const userUid=user.uid; 
+        console.log(userUid,auth.currentUser.uid);
+        document.getElementById("nevtreh").style.display="none";
+        document.getElementById("garah").style.display="block";
+        
+        }
+});
+document.getElementById("garah").addEventListener("click", signout);
+async function signout () {
+         await signOut(auth).then(async() => {
+           await console.log("signed out");
+           await swal("Амжилттай Бүртгэлээс гарлаа");
+           location.reload();
+           document.getElementById("nevtreh").style.display="block";
+          document.getElementById("garah").style.display="none";
+          }).catch((error) => {
+          });
+  }
+
 const threeScene = new THREE.Scene();
 threeScene.background = new THREE.Color(0x525b88);
 const camera = new THREE.PerspectiveCamera(
@@ -114,3 +205,4 @@ gsap.to(sphere.rotation, {
     pin: ".canvas",
   },
 });
+

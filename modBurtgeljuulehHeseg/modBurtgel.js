@@ -556,7 +556,7 @@ document.getElementById("registrationButton").addEventListener("click",async()=>
           }else{
             swal("zurag oruulna uu");
           }
-                                     await swal("Зураг амжилттай орлоо")
+                                     await swal("goodLuck")
                                       location.reload();
               }
           })  
