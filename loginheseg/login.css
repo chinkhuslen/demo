@@ -276,6 +276,7 @@ position: relative;
 display: flex;
 width: 100%;
 height: 100%;
+justify-content: space-between;
 
 }
 .bubbles span{
@@ -481,11 +482,14 @@ margin-left: 5%;
     cursor: pointer;
 }
 
-@media (max-width:600px) {
+@media (max-width:1200px) {
     body{
         display: flex;
         justify-content: center;
         align-items: center; 
+   }
+   .baihgui{
+       display: none;
    }
     .nevtrehHeseg{
         width: 400px;

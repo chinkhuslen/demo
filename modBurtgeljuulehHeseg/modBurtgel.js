@@ -1,6 +1,6 @@
-
-///////firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+
+
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -8,52 +8,61 @@ import {
   signOut,
   onAuthStateChanged,
   } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js";
-  import {
-   getStorage,ref as sRef,
-   uploadBytes ,
-   uploadBytesResumable
+
+   import {
+       getStorage,ref as sRef,
+       uploadBytes ,
+       uploadBytesResumable
     } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-storage.js";
 
   import {
-  getFirestore,
-  collection,
-  getDocs,
-  addDoc,
-  getDoc,
-  setDoc,
-  doc,
-  updateDoc,
-  increment,
+      getFirestore,
+      collection,
+      getDocs,
+      addDoc,
+      getDoc,
+      setDoc,
+      doc,
+      updateDoc,
+      increment,
   } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js";
+
+
+
   import {
-  getDatabase,
-  onValue,
-  ref,
-  push,
-  query,
-  orderByChild,
-  orderByKey,
-  child,
-  set,
-  get,
-  onChildChanged,
+      getDatabase,
+      onValue,
+      ref,
+      push,
+      query,
+      orderByChild,
+      orderByKey,
+      child,
+      set,
+      get,
+      onChildChanged,
   } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js";
   
   const firebaseConfig = {
-    apiKey: "AIzaSyDgYAy6FkKAJ2_0e07Xh8LhzYOpP1ra9Q8",
-    authDomain: "demo1-1ee9d.firebaseapp.com",
-    databaseURL: "https://demo1-1ee9d-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "demo1-1ee9d",
-    storageBucket: "demo1-1ee9d.appspot.com",
-    messagingSenderId: "247353066341",
-    appId: "1:247353066341:web:4b8f133a68a3d85679578c",
-    measurementId: "G-5N6BTMR62T"
+          apiKey: "AIzaSyDgYAy6FkKAJ2_0e07Xh8LhzYOpP1ra9Q8",
+          authDomain: "demo1-1ee9d.firebaseapp.com",
+          databaseURL: "https://demo1-1ee9d-default-rtdb.asia-southeast1.firebasedatabase.app",
+          projectId: "demo1-1ee9d",
+          storageBucket: "demo1-1ee9d.appspot.com",
+          messagingSenderId: "247353066341",
+          appId: "1:247353066341:web:4b8f133a68a3d85679578c",
+          measurementId: "G-5N6BTMR62T"
   };
+
+
+
       const app = initializeApp(firebaseConfig);
       const auth=getAuth(app);
       const db=getFirestore(app);
       const realDb=getDatabase(app);
       const storage = getStorage(app);
+
+let id=0;
  
 const signUp = document.getElementById("signUp");
 const signIn = document.getElementById("signIn");
@@ -61,8 +70,6 @@ const advise = document.getElementById("advise");
 const statistic = document.getElementById("statistic");
 var close = document.getElementById("close-x");
 const tt = document.getElementsByClassName("otherTree")[0];
-console.log("hello")
-let inputValue="";
 
 
 
@@ -90,8 +97,7 @@ let year = date. getFullYear();
         let selectedYear = year;
 
 mth_element.textContent = months[month] + " " + year;
-console.log(
-mth_element.textContent = months[month] + " " + year)
+
 
 selected_date_element.textContent=formatDate(date);
 selected_date_element.dataset.value=selectedDate;
@@ -107,17 +113,15 @@ if(!checkEventPathForClass(e.path,'dates')){
 }
 }
 function goToNextMonth (e){
-console.log("ddddd")
-month++;
-if (month > 11){
-  month = 0;
-  year++;
+    month++;
+    if (month > 11){
+      month = 0;
+      year++;
 }
 mth_element.textContent = months[month] + " " + year;
 populateDates();
 }
 function goToPrevMonth (e){
-console.log(e)
 month--;
 if (month<0){
   month = 11;
@@ -134,7 +138,6 @@ if (month == 1){
 }
 if (month == 3 || month == 5 || month == 8 || month == 10 ){
   amount_days =30;
-  console.log("sariin 30")
 }
 for (let i=0; i<amount_days; i++){
   const day_element = document.createElement('div');
@@ -184,6 +187,7 @@ let r;
 let too=document.getElementById("countmod")
 
 document.getElementById("addBtn").addEventListener("click",async function(){
+  let inputValue="";
     console.log("add button daragdlaa.",document.getElementById("SongogdsonModGargahHeseg"));
 
     let li = document.createElement("li");
@@ -269,13 +273,15 @@ onAuthStateChanged(auth,async(user)=>{
               
                   if(user)
                   {
-                  
+                  console.log("hello1");
                   
                   const userUid=user.uid; 
-                  console.log(userUid,auth.currentUser.uid)
+                  console.log(userUid,auth.currentUser.uid);
+                  document.getElementById("nevtreh").style.display="none";
+                  document.getElementById("garah").style.display="block";
                   if(auth.currentUser.uid===userUid);
                   {
-                      
+                      console.log("adilhan baina");
                       ///huvihunesehiig shalgana
                       const  huviHunEseh=await getDocs(collection(db,"huviHun"));
                       //baiguulaga esehiig shalgana
@@ -283,33 +289,19 @@ onAuthStateChanged(auth,async(user)=>{
 
                       
                       huviHunEseh.forEach(async(huviHun)=>{
-                    
+                          console.log(huviHun.data().userUid,userUid)
                       if(huviHun.data().userUid===userUid){
-                              
-                              //  const bairshil=document.getElementById('bairshil').value;
-                              //  const tooShirheg=parseInt(document.getElementById('countmod').innerText);
-                              //  const HezeeTarisan=document.getElementsByClassName('selected-date')[0].innerText;
-                              //  const modniitorol=document.getElementById('modniitorol').value;
-                              //  const modniiiDelgerengui=document.getElementById("description").value;
-                              //  console.log(bairshil,tooShirheg,HezeeTarisan,modniitorol,modniiiDelgerengui)
+                                    console.log("huviHun",huviHun.data().userUid,userUid);
+
                       }
                       });
 
 
 
-
                       baiguulagaEseh.forEach(async(baiguulaga)=>{
-                          console.log("baiguulaga",baiguulaga.data().userUid,userUid);
+                          
                           if(baiguulaga.data().userUid===userUid){
-                              
-
-                              
-                          //  const bairshil=document.getElementById('bairshil').value;
-                          //  const tooShirheg=parseInt(document.getElementById('countmod').innerText);
-                          //  const HezeeTarisan=document.getElementsByClassName('selected-date')[0].innerText;
-                          //  const modniitorol=document.getElementById('modniitorol').value;
-                          //  const modniiiDelgerengui=document.getElementById("description").value;
-                          //  console.log(bairshil,tooShirheg,HezeeTarisan,modniitorol,modniiiDelgerengui)
+                            console.log("baiguulaga",baiguulaga.data().userUid,userUid);
                       }
                       })
               
@@ -317,6 +309,7 @@ onAuthStateChanged(auth,async(user)=>{
                   }
                   }
 });
+let arr=[]
 // ********************************************************************************************************** //
 document.getElementById("registrationButton").addEventListener("click",async()=>{
 
@@ -331,7 +324,9 @@ document.getElementById("registrationButton").addEventListener("click",async()=>
         let HezeeTarisan=document.getElementsByClassName('selected-date')[0].innerText;
         let modniitorol=document.getElementById('modniitorol').value;
         let modniiiDelgerengui=document.getElementById("description").value;
-            
+            console.log(bairshil,tooShirheg,HezeeTarisan,modniitorol,modniiiDelgerengui);
+            const saveBtn=document.getElementById("save");
+
 
 
       onAuthStateChanged(auth,async(user)=>{
@@ -350,12 +345,10 @@ document.getElementById("registrationButton").addEventListener("click",async()=>
 
               
               huviHunEseh.forEach(async(huviHun)=>{
-                  
+                  console.log(huviHun.data().userUid,userUid)
               if(huviHun.data().userUid===userUid){
-                      
                          const tarisanModTorloor=await collection(db,"users",huviHun.data().userUid,"tarisanModTorloor")
-                            
-                             
+                              console.log(tarisanModTorloor)
                                      //////Тухайн байгуулагын нийт мод нэмэгдэнэ/// UID гаар нэмэгдэнэ
                                      await setDoc(doc(db,"huviHun",userUid),{
                                           niitmod:increment(tooShirheg)
@@ -431,6 +424,7 @@ document.getElementById("registrationButton").addEventListener("click",async()=>
                                               haana:bairshil,
                                               modniitorol:hereglegciinTuhainOdriinTarisanModTorloor,
                                               delgerengui:modniiiDelgerengui,
+                                              zurag:"https://president.mn/wp-content/uploads/2021/11/1-Copy.png"
                                       } 
                                       await addDoc(collection(db,"medee"),medee);
                                       await push(ref(realDb,"medee"),{
@@ -440,9 +434,11 @@ document.getElementById("registrationButton").addEventListener("click",async()=>
                                         haana:bairshil,
                                         modniitorol:hereglegciinTuhainOdriinTarisanModTorloor,
                                         delgerengui:modniiiDelgerengui,
+                                        zurag:"https://president.mn/wp-content/uploads/2021/11/1-Copy.png"
 
                                       })
-                                      await swal("Амжилттай Бүртгэгдлээ")
+                                      await swal("Амжилттай бүртгэгдлээ");
+
                                       location.reload();
 
 
@@ -458,7 +454,6 @@ document.getElementById("registrationButton").addEventListener("click",async()=>
                   if(baiguulaga.data().userUid===userUid){
                               const tarisanModTorloor=await collection(db,"users",baiguulaga.data().userUid,"tarisanModTorloor")
                               console.log(tarisanModTorloor)
-                              alert('baiguulagabain');
                                      //////Тухайн байгуулагын нийт мод нэмэгдэнэ/// UID гаар нэмэгдэнэ
                                      await setDoc(doc(db,"baiguulaga",userUid),{
                                           niitmod:increment(tooShirheg)
@@ -533,13 +528,35 @@ document.getElementById("registrationButton").addEventListener("click",async()=>
                                       } 
                                       await addDoc(collection(db,"medee"),medee);
                                       await push(ref(realDb,"medee"),{
-                                        baiguulagiinNer:baiguulaga.data().baiguulaganer,
+                                        HenTarisan:baiguulaga.data().baiguulaganer,
                                         HezeeTarisan:HezeeTarisan,
                                         niithedenShirheg:tooShirheg,
                                         haana:bairshil,
                                         modniitorol:hereglegciinTuhainOdriinTarisanModTorloor,
                                         delgerengui:modniiiDelgerengui,
                                       })
+                                      const file=document.getElementById("image");
+                                      await console.log(file.files[0]);
+                                      await arr.push(file.files[0])
+                                      console.log(arr)
+
+                                      if(file.files[0]){
+            // const storageRef = sRef(storage, auth.currentUser.uid+"/"+ HezeeTarisan ,);
+              console.log("Saving...", file.files[0]);
+              await push(ref(realDb,"medee"),{
+                                        baiguulagiinNer:baiguulaga.data().baiguulaganer,
+                                        HezeeTarisan:HezeeTarisan,
+                                        niithedenShirheg:tooShirheg,
+                                        haana:bairshil,
+                                        modniitorol:hereglegciinTuhainOdriinTarisanModTorloor,
+                                        delgerengui:modniiiDelgerengui,
+                                        modzurag:arr[0].name,
+                                      })
+              
+          }else{
+            swal("zurag oruulna uu");
+          }
+                                     await swal("Зураг амжилттай орлоо")
                                       location.reload();
               }
           })  
@@ -553,21 +570,39 @@ document.getElementById("registrationButton").addEventListener("click",async()=>
 })
 
 const saveBtn=document.getElementById("save");
-// files.addEventListener("click",saveFile);
+
 saveBtn.addEventListener("click",()=>{
-  console.log("helo")
-  const filee=document.getElementById("image");
- 
-    // 'file' comes from the Blob or File API
-    if(filee.files[0]){
-      console.log(filee.files[0]);
-      const storageRef = sRef(storage, auth.currentUser.uid+"/"+ filee.files[0].name ,);
-        console.log("Saving...", filee.files[0]);
-      uploadBytes(storageRef, filee.files[0],).then((snapshot) => {
-       
-        console.log("Saved");
-      }).catch(err=>console.log(err));
-    }else{
-      alert("zurag oruulna uu")
-    }
-})
+
+
+        console.log("hello");
+        const file=document.getElementById("image");
+        let HezeeTarisan=document.getElementsByClassName('selected-date')[0].innerText;
+
+          // 'file' comes from the Blob or File API
+          if(file.files[0]){
+            console.log(file.files[0]);
+            const storageRef = sRef(storage, auth.currentUser.uid+"/"+ HezeeTarisan ,);
+              console.log("Saving...", file.files[0]);
+              
+              uploadBytes(storageRef, file.files[0],).then(async(snapshot) => {
+             
+                await swal("Зураг амжилттай орлоо");
+                id++;
+            }).catch(err=>console.log(err));
+          }else{
+            swal("zurag oruulna uu");
+          }
+
+});
+
+document.getElementById("garah").addEventListener("click", signout);
+async function signout () {
+         await signOut(auth).then(async() => {
+           await console.log("signed out");
+           await swal("Амжилттай Бүртгэлээс гарлаа");
+           location.reload();
+           document.getElementById("nevtreh").style.display="block";
+          document.getElementById("garah").style.display="none";
+          }).catch((error) => {
+          });
+  }
