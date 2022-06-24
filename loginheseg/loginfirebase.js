@@ -78,7 +78,7 @@ if((document.getElementById("baiguulagiinNerHeseg").style.display==="none")){
           userUid:userUidFromCred
         });
           await swal("Амжилттай нэвтэрлээ");
-          location.reload();
+          window.location.href('./profile/index.html');
         // location.href = "modBurtgel.html";
         
         
@@ -105,7 +105,8 @@ if((document.getElementById("baiguulagiinNerHeseg").style.display==="none")){
                 userUid:userUidFromCred
               });
                 await swal("Амжилттай нэвтэрлээ");
-          location.reload();
+                window.location.href('./profile/index.html');
+          
               // location.href = "modBurtgel.html";
                
             })
@@ -138,7 +139,7 @@ if((document.getElementById("baiguulagiinNerHeseg").style.display==="none")){
         console.log(auth.currentUser.email);
         swal("Амжилттай нэвтэрлээ");
         localStorage.setItem("userid",userUid)
-        // location.href = "modBurtgel.html";
+        window.location.href('./profile/index.html');
       
        
       })
@@ -159,6 +160,7 @@ const emailInput=document.getElementById("email").value;
     if(ext[0]==="yahoo.com" || ext[0]==="gmail.com")
     {
      await login();
+    
      
     }else{
       swal("Нэвтрэх хаяг буруу байна")
