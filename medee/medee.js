@@ -59,6 +59,7 @@ onValue(ref(realDb, 'medee'), snap => {
                                         <h2>${ref.val().haana}</h2>
                                         <span>
                                             <p>${ref.val().delgerengui}.</p>
+                                            <h2>${ref.val().HezeeTarisan}</h2>
                                             <h2><i class="fa fa-tree"></i>${ref.val().niithedenShirheg}</h2>
                                         </span>
                                     </div>

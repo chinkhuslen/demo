@@ -128,6 +128,11 @@ body {
     padding: 1rem;
 }
 
+.dude span i {
+  color: #13af49;
+  text-shadow: 0 0 0.3px #000;
+}
+
 .img-infornation {
     width: 100%;
     height: auto;
