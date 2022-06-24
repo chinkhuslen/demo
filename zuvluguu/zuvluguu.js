@@ -146,4 +146,32 @@ document.querySelector('#tehiin-sheeg').onclick = () => {
 document.querySelector('.close-tehiin-sheeg').onclick = () => {
     document.querySelector('.tehiin-sheeg').classList.remove('active-types')
 }
+
+document.querySelector('.iiil-first').onclick = () => {
+    document.querySelector('.planting-tree-advice-first').classList.add('active-types');
+}
+document.querySelector('.planting-Close').onclick = () => {
+    document.querySelector('.planting-tree-advice-first').classList.remove('active-types')
+}
+
+document.querySelector('.iiil-second').onclick = () => {
+    document.querySelector('.price-tree-advice-second').classList.add('active-types-dude');
+}
+document.querySelector('.price-advi-Close').onclick = () => {
+    document.querySelector('.price-tree-advice-second').classList.remove('active-types-dude')
+}
+
+document.querySelector('.iiil-third').onclick = () => {
+    document.querySelector('.ashig-tree-advice-third').classList.add('active-types-dude-two');
+}
+document.querySelector('.ashig-advi-Close').onclick = () => {
+    document.querySelector('.ashig-tree-advice-third').classList.remove('active-types-dude-two')
+}
+
+document.querySelector('.iiil-four').onclick = () => {
+    document.querySelector('.handiv-tree-advice-four').classList.add('active-types-dude-third');
+}
+document.querySelector('.handiv-advi-Close').onclick = () => {
+    document.querySelector('.handiv-tree-advice-four').classList.remove('active-types-dude-third')
+}
 // ===============================================================

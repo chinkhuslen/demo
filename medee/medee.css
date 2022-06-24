@@ -13,8 +13,90 @@ body {
     /* background: linear-gradient(45deg, forestgreen, lightgreen); */
     background: #EBF5FB;
 }
-
+.img {
+    object-fit: cover;
+    background-image: url(./mapZ.jpeg);
+    /* background-size: cover; */
+  }
+  .bar {
+    z-index: 100000;
+    /* position: fixed; */
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(#13af49, #228c22);
+    font-size: 15px;
+    color: #fdfefd;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-heseg {
+    z-index: 10000;
+    position: fixed;
+    height: 10vh;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .header {
+    display: flex;
+    gap: 30px;
+    background-color: #e8e9eb;
+    align-items: center;
+    height: 66%;
+  }
+  .header p {
+    font-size: 20px;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+  }
+  .logo {
+    margin-left: 5%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .logo img {
+    width: 130px;
+    height: 100%;
+    border-radius: 50%;
+  }
+  
+  .torol {
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .torol a {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* height: 40px; */
+    color: #fdfefd;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #314f9b;
+  }
+  .garchig:hover {
+    background-color: #a3ebb1;
+  }
+  .garchig {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .torol {
+    height: 100%;
+  }
+  
 #information-medee-heseg {
+    
     width: 100%;
     height: auto;
     display: flex;
@@ -25,6 +107,7 @@ body {
 }
 
 .information-in-heseg {
+    margin-top: 10%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(380px, auto));
     grid-gap: 1.5em;
