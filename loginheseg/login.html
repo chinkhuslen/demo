@@ -217,8 +217,7 @@ if((document.getElementById("baiguulagiinNerHeseg").style.display==="none")){
           userUid:userUidFromCred
         });
           await swal("Амжилттай нэвтэрлээ");
-          location.reload();
-        // location.href = "modBurtgel.html";
+          location.href = "../profile/index.html";
         
         
       })
@@ -244,7 +243,7 @@ if((document.getElementById("baiguulagiinNerHeseg").style.display==="none")){
                 userUid:userUidFromCred
               });
                 await swal("Амжилттай нэвтэрлээ");
-          location.reload();
+                location.href = "../profile/index.html";
               // location.href = "modBurtgel.html";
                
             })
@@ -263,21 +262,20 @@ if((document.getElementById("baiguulagiinNerHeseg").style.display==="none")){
 
 
   //nevtreh
-  const login=()=>{
+  const login=async()=>{
     const email=document.getElementById("email").value;
     const password=document.getElementById("password").value;
   
     signInWithEmailAndPassword(auth,email,password)
     signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
+      .then(async(userCredential) => {
         // Signed in
         let userUid = userCredential.user.uid;
         console.log("amjilttai newterlee uid= ", userUid);
         // window.location.href = "./profileHeseg/.profile.html";
         console.log(auth.currentUser.email);
-        swal("Амжилттай нэвтэрлээ");
-        localStorage.setItem("userid",userUid)
-        // location.href = "modBurtgel.html";
+        await swal("Амжилттай нэвтэрлээ");
+        location.href = "../profile/index.html";
       
        
       })
